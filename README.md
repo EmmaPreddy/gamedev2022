@@ -16,3 +16,7 @@ dot73 <br>
 
 dot74 <br>
 ![image](https://user-images.githubusercontent.com/113378268/192843762-b00dde70-d4a3-4a33-af24-c4325645d310.png)
+
+
+dot75:
+![image](https://user-images.githubusercontent.com/113378268/192844734-0b225943-ffe2-4436-8bcb-b2e790d4add3.png)
