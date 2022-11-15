@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <textarea id="myArea01" rows=4 cols=70>Hello Ellis</textarea><br> 
+    <textarea id="myArea01" rows=4 cols=70>Hello Ellis </textarea><br> 
 
 
     <input type=button value="encrypt" onclick="{
@@ -34,7 +34,7 @@
         
     <textarea id="myArea03" rows=4 cols=70></textarea><br> 
     
-    <h1>Encrption done with base64 </h1>
+    <h1>Encription</h1>
     
     <script>
         // base64 encoded text is in the text box below
