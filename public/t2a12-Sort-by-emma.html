@@ -1,187 +1,29 @@
-<h1 align=center>t2a12 Sort-by-Emma</h1><br>
-<p id="result">Sorted</p><br>
-<button id="generate" onclick="generateNumbers()" disabled="">Generate</button>
-<button id="sort" onclick="sortNumbers()" disabled="">Sort</button>
-<button id="reset" onclick="reset()">Reset</button>
-<br>
-<br>
-<br>
-<div id="numbers">"1"<br>"7"<br>"2"<br>"14"<br>"6"<br>"18"<br>"15"<br>"20"<br>"8"<br>"3"<br>"8"<br>"16"<br>"11"<br>"4"<br>"19"<br>"9"<br>"10"<br>"13"<br>"5"<br>"12"<br>"17"<br>
-</div>
-<div id="sortedNumbers">"1"<br>"2"<br>"3"<br>"4"<br>"5"<br>"6"<br>"7"<br>"8"<br>"9"<br>"10"<br>"11"<br>"12"<br>"13"<br>"14"<br>"15"<br>"16"<br>"17"<br>"18"<br>"19"<br>"20"<br>
-</div>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap');
+<h1 align=center>t2a12 Sort by Emma</h1>
 
-    
-    BODY{
-        background-color: #f2f2f2;
-        BORDER: 3px solid #000000;
-        border-radius: 10px;
-        
-        font-family: 'Poppins', sans-serif;
-        FONT-SIZE: 12px;
-        COLOR: #000000;
-        MARGIN: 10px;
-        PADDING: 30px;
+<script>
+   let myMax = 3      // 52 when working
+   let myCards = new Array(myMax)  
+</script>
 
-    }
-    /* display sorted numbers beside the unsorted numbers */
-    #numbers {
-        border: #000000 1px solid;
-        width: auto;
-        height: auto;
-        padding: 5px;
-        text-align: center;
+<input type=button value="Set Random" onclick="{
+  for ( let myLoop = 0;   myLoop < myMax;  myLoop++){
+     myCards[myLoop] = Math.floor(Math.random()*10)
+  }
+}">
 
-        float: left;
-    }
-    #sortedNumbers {
-        float: left;
-        border: #000000 1px solid;
-        width: auto;
-        height: auto;
-        padding: 5px;
-        margin-left: 200px;
-        text-align: center;
-    }
-</style>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap');
+<input type=button value="Show" onclick="{
+  let myTemp = ''
+  for ( let myLoop = 0;   myLoop < myMax;  myLoop++){
+     myTemp += myLoop + ' = '+ myCards[myLoop] + '<br>'
+  }
+   document.getElementById('myDiv01').innerHTML = myTemp
+}">
 
-    
-    BODY{
-        background-color: #f2f2f2;
-        BORDER: 3px solid #000000;
-        border-radius: 10px;
-        
-        font-family: 'Poppins', sans-serif;
-        FONT-SIZE: 12px;
-        COLOR: #000000;
-        MARGIN: 10px;
-        PADDING: 30px;
+<input type=button value="Sort" onclick="{
+  let myTemp = 0
+  for ( let myLoop = 0;   myLoop < myMax;  myLoop++){
+     myCards[myLoop] = 0 // you do this stuff
+  }
+}">
 
-    }
-    /* display sorted numbers below the unsorted numbers */
-    #numbers {
-        border: #000000 1px solid;
-        width: auto;
-        height: auto;
-        padding: 5px;
-        text-align: center;
-
-        float: left;
-    }
-    #sortedNumbers {
-        float: left;
-        border: #000000 1px solid;
-        width: auto;
-        height: auto;
-        padding: 5px;
-        margin-left: 200px;
-        text-align: center;
-    }
-</style>
-</body>
-<html><head><script>
-    //script that generates random numbers, and sorts them in ascending order
-    //function that generates random numbers and stores them in an array, displays them, with a br after each number 
-    //every time the function is called, it generates a new set of random numbers and resets the array
-    var numbers = [];
-    function init(){
-        //disable reset button
-        document.getElementById("reset").disabled = true;
-        //disable sort button
-        document.getElementById("sort").disabled = true;}
-
-        function generateNumbers() {
-        //display numbers have been generated in result tag 
-        document.getElementById("result").innerHTML = "Generated";
-
-        document.getElementById("generate").disabled = true;
-        //enable sort button
-        document.getElementById("sort").disabled = false;
-
-
-            for (var i = 0; i < 20; i++) {
-            numbers[i] = Math.floor(Math.random() * 20);
-            //display numbers with br in numbers tag 
-            document.getElementById("numbers").innerHTML += numbers[i] + "<br>";
-            //store numbers in the array
-            numbers[i] = numbers[i];}
-        return numbers;
-    
-        function sortNumbers() {
-        //display numbers have been sorted in results tag
-        document.getElementById("result").innerHTML = "Numbers have been sorted";
-        //disable sort button
-        document.getElementById("sort").disabled = true;
-        //enable reset button
-        document.getElementById("reset").disabled = false;
-
-
-
-        numbers.sort(function (a, b) {
-            return a - b;
-        });
-        for (var i = 0; i < numbers.length; i++) {
-            document.getElementById("sortedNumbers").innerHTML += numbers[i] + "<br>";
-        }
-            //every time the function is called, it generates a new set of random numbers and resets the array
-
-        
-
-    }
-//function to reset the array and the display
-        function reset() {
-        numbers = [];
-        document.getElementById("numbers").innerHTML = "";
-        document.getElementById("sortedNumbers").innerHTML = "";
-
-        //enable the generate button
-        document.getElementById("generate").disabled = false;
-        //enable the sort button
-        document.getElementById("sort").disabled = true;
-        //disable reset button
-        document.getElementById("reset").disabled = true;
-        //in result tag, say "reset"
-        document.getElementById("result").innerHTML = "Reset";}
-
-
-<style>
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap');
-
-    
-    BODY{
-        background-color: #f2f2f2;
-        BORDER: 3px solid #000000;
-        border-radius: 10px;
-        
-        font-family: 'Poppins', sans-serif;
-        FONT-SIZE: 12px;
-        COLOR: #000000;
-        MARGIN: 10px;
-        PADDING: 30px;
-
-    }
-    /* display sorted numbers beside the unsorted numbers */
-    #numbers {
-        border: #000000 1px solid;
-        width: auto;
-        height: auto;
-        padding: 5px;
-        text-align: center;
-
-        float: left;
-    }
-    #sortedNumbers {
-        float: left;
-        border: #000000 1px solid;
-        width: auto;
-        height: auto;
-        padding: 5px;
-        margin-left: 200px;
-        text-align: center;
-    }
-
+<dir id="myDiv01"></div>
