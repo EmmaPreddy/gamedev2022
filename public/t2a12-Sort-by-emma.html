@@ -26,19 +26,36 @@ Version 0.0.4
   let backup = 0 
   let myTemp = ''
   for ( let myloop = 0; myloop < myMax*2; myloop++){
-  for ( let myLoop = 0;   myLoop < myMax*2;  myLoop++){
-     if(myCards[myLoop] > myCards[myLoop+1]){
-     backup = myCards[myLoop]
-     myCards[myLoop] = myCards[myLoop+1]
-     myCards[myLoop+1] = backup
-   }
-     if(myCards[myLoop] <= myCards[myLoop+1]){ 
-     for ( let myLoop = 0;   myLoop < myMax;  myLoop++){
-     myTemp += myLoop+1 + ' = '+ myCards[myLoop] + '<br>'
-  }
-     document.getElementById('myDiv01').innerHTML = myTemp 
+    for ( let myLoop = 0;   myLoop < myMax*2;  myLoop++){
+      if(myCards[myLoop] > myCards[myLoop+1]){
+          backup = myCards[myLoop]
+          myCards[myLoop] = myCards[myLoop+1]
+          myCards[myLoop+1] = backup
+      }
+    }
+    document.getElementById('myDiv01').innerHTML = myTemp 
   }
   
   }">
 
     <div id="myDiv01"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     if(myCards[myLoop] <= myCards[myLoop+1]){ 
+     for ( let myLoop = 0;   myLoop < myMax;  myLoop++){
+     myTemp += myLoop+1 + ' = '+ myCards[myLoop] + '<br>'
+  }
