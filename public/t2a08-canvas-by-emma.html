@@ -35,7 +35,8 @@ You use loops and variables to make fast fancy drawings <br><br>
    myContext.moveTo(300,100);
    myContext.quadraticCurveTo(100,220,240,110);
    myContext.stroke();
-}">
+}"><br>
+
 
 
 
@@ -65,3 +66,12 @@ You use loops and variables to make fast fancy drawings <br><br>
    let myCanvas=document.getElementById('myCoolTag');
    let myContext=myCanvas.getContext('2d');
 </script>
+
+
+<input type=button value=".lineTo(50,300)" onclick="{
+   myContext.beginPath();
+   myContext.lineWidth = 1;   
+   myContext.moveTo(25,100);
+   myContext.lineTo(30,200);
+   myContext.stroke();
+}">
