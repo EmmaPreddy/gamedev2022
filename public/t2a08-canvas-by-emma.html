@@ -75,3 +75,14 @@ You use loops and variables to make fast fancy drawings <br><br>
    myContext.lineTo(30,200);
    myContext.stroke();
 }">
+
+<input type=button value=".fillText('I hate this', 400, 100)" onclick="{
+   myContext.font = '20px Arial';
+   myContext.fillText('I hate this', 400, 100);
+   myContext.translate(400, 100);  
+   myContext.rotate(60 * Math.PI / 180); 
+   myContext.fillText('I hate this', 10, 10);
+   myContext.stroke();
+   myContext.resetTransform();  
+   //myContext.rotate(-60 * Math.PI / 180); 
+}">
