@@ -1,45 +1,157 @@
-<script>
+<html><head><style type="text/css"></style><style type="text/css" id="operaUserStyle">
+    video {
+      filter: url('data:image/svg+xml,\
+        <svg xmlns="http://www.w3.org/2000/svg">\
+          <filter id="sharpen">\
+            <feConvolveMatrix order="3" preserveAlpha="true" kernelMatrix="1 -1 1 -1 -1 -1 1 -1 1"/>\
+          </filter>\
+        </svg>#sharpen');
+    }
   
-  function myExampleFunction(){
-    let myIn01 = parseInt(document.getElementById('myText01').value)
-    let mySum = myIn01 + myIn01
-    let myReply = myIn01 + ' + ' + myIn01 + '=' + mySum
-    return myReply
-    
-}
-  
-</script>
 
-Version 0.0.4
-
-<h2 align=center>t1a09-functions-by-Emma.html</h2>
-
+    img {
+      filter: url('data:image/svg+xml,\
+        <svg xmlns="http://www.w3.org/2000/svg">\
+          <filter id="sharpen">\
+            <feConvolveMatrix order="3" preserveAlpha="true" kernelMatrix="1 -1 1 -1 -1 -1 1 -1 1"/>\
+          </filter>\
+        </svg>#sharpen');
+    }
+  </style></head><body style="background-color:black;">
+<font color="white"> 
+<h2 align="center">Functions</h2>
+<hr>
 <a href="https://www.w3schools.com/js/js_functions.asp">
-  Good reference to Javascript functions</a><br>
+Good reference to Javascript functions</a><br>
 
-Functions are used to sensibly organise code. Then they are "Called" elsewhere.
-Information can also be passed to functions (that's more advanced).
-
-<h4> Example Functions code</h4>
-<pre>
-function myGrabNumber(){
-   return parseInt(document.getElementById('myText01').value) 
+Functions are used to sensibly organzie code . Then they are " Called " elsewhere .
+Information can also be passed to functions (that's more advanced ) .
+<hr>
+<h4> Example Functions code </h4>
+<pre>function myGrabNumber(){
+    return parseInt(document.getElementById('myText01').value)
 }
 </pre>
 
+<script>
+
+function myExampleFunction(){
+        let myIn01 = parseInt(document.getElementById('myText01').value)
+        let mySum = myIn01 + myIn01
+        let myReply = myIn01 + ' + ' + myIn01 + ' = ' + mySum
+        return myReply
+}
+
+</script>
+<hr>
 <h4> Example working code</h4>
 
 <input type="text" id="myText01" value="3"><br>
 
-<input type="button" value="Function Example" onclick="{
-   document.getElementById('myDiv01').innerHTML =  myExampleFunction()
+<input type="button" value="Function Example" onclick=" {
+   document.getElementById('myDiv02').innerHTML = myExampleFunction()
 }">
+<div id="myDiv02">... </div>
+<hr>
+<script>
+function calculateTemp() {
+   function celToFah(celsius) {
+      var fahrenheit = Math.round((celsius * (9/5)) + 32);
+      return fahrenheit;
+   }
 
-<div id="myDiv">...</div>
+   function fahToCel(fahrenheit) {
+      var celsius = Math.round((fahrenheit - 32) * (5/9));
+      return celsius;
+   }
 
+   // Checks if Calsius or Fahrenheit is selected
+   var tempSelected = document.getElementById("temp_diff");
+   var valueTemp = tempSelected.options[tempSelected.selectedIndex].value;
 
-</body>
-</html>
+   // Checks the value inside the Temperature input
+   var numberTemp = document.getElementById("temp").value;
+
+   var result;
+   
+   if (valueTemp == 1) {
+      result = celToFah(numberTemp);
+      document.getElementById("resultContainer").innerHTML = "= " + result + "°Fahrenheit";
+   } else {
+      result = fahToCel(numberTemp);
+      document.getElementById("resultContainer").innerHTML = "= " + result + "°Celsius";
+   }
+   
+}
+</script> 
+
+<form id="tempCalc" onsubmit="calculateTemp(); return false">
+   <label for="temp">Please enter the temperature you'd like to convert.</label> <br>
+   <input name="temp" id="temp" type="number"> 
+   <select name="temp_diff" id="temp_diff">
+      <option value="1">°Celsius</option>
+      <option value="2">°Fahrenheit</option>
+   </select> <br>
+   <input name="temp" type="submit"> <br>
+   <span id="resultContainer"></span>
+</form>
+<div id="myDiv01">... </div>
+      
+        <button onclick="my3Function()">Click me</button>
+
+<p id="dem3o"></p>
+
+<script>
+function my3Function() {
+  document.getElementById("dem3o").innerHTML = "Hello World";
+}
+</script>
+        
+<hr> 
+When You Press the button the Color Changes
+<br>
+<button id="btn">Button</button>
+<script>
+const btn = document.getElementById('btn');
+
+let index = 0;
+
+const colors = ['salmon', 'green', 'blue', 'purple'];
+
+btn.addEventListener('click', function onClick() {
+  btn.style.backgroundColor = colors[index];
+  btn.style.color = 'white';
+
+  index = index >= colors.length - 1 ? 0 : index + 1;
+});
+
+</script> 
+<hr>
+<input type="range" id="myRange" value="90">
+
+<p>Click the button to call the function and get the value of the Slider.</p>
+
+<button onclick="myFunction1()">Try it</button>
+
+<p id="demo2"></p>
+
+<script>
+function myFunction1() {
+  var x = document.getElementById("myRange").value;
+  document.getElementById("demo2").innerHTML = x;
+}
+</script><hr>
+    
+    <p id="demo">Press button to decorate</p>
+
+<button type="button" onclick="myFunction()">Decorate text</button>
+
+<script>
+function myFunction() {
+  document.getElementById("demo").style.textDecoration = "line-through";
+}
+</script>
+</font></body></html>
 
 <!DOCTYPE html>
 <html>
