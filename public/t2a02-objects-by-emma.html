@@ -1,23 +1,4 @@
-<html><head><style type="text/css"></style><style type="text/css" id="operaUserStyle">
-    video {
-      filter: url('data:image/svg+xml,\
-        <svg xmlns="http://www.w3.org/2000/svg">\
-          <filter id="sharpen">\
-            <feConvolveMatrix order="3" preserveAlpha="true" kernelMatrix="1 -1 1 -1 -1 -1 1 -1 1"/>\
-          </filter>\
-        </svg>#sharpen');
-    }
-  
-
-    img {
-      filter: url('data:image/svg+xml,\
-        <svg xmlns="http://www.w3.org/2000/svg">\
-          <filter id="sharpen">\
-            <feConvolveMatrix order="3" preserveAlpha="true" kernelMatrix="1 -1 1 -1 -1 -1 1 -1 1"/>\
-          </filter>\
-        </svg>#sharpen');
-    }
-  </style></head><body>Version 0.5.3
+<body>Version 0.0.6
 
 <h2 align="center">t2a02-objects-by-emma.html</h2> 
 <a href="">Good reference to Javascript Objects</a><br> 
@@ -56,7 +37,7 @@ Nothing: <input type="text" i="myText00" value="Useless at the moment"><br>
       document.getElementById('myDiv00').innerHTML += 'eyeColor: ' + myPerson.eyeColor + '<br>'  
      }">
 
-<div id="myDiv00"><br>myPerson Object has properties: <br>firstName: John<br>lastName: Doe<br> age: 50<br>eyeColor: blue<br></div> 
+<div id="myDiv00">...</div> 
 <br> 
 
 <hr> 
@@ -80,7 +61,7 @@ Nothing: <input type="text" i="myText00" value="Useless at the moment"><br>
         document.getElementById('myDiv01').innerHTML = thePerson.firstname + ' ' + thePerson.lastname + ' is ' + thePerson.Age + ' years old. She/he has ' + thePerson.haircolor + ' hair and ' + thePerson.eyecolor + ' eyes. ' 
         }">
 
-<div id="myDiv01">Wren Preddy is 16 years old. She/he has Black hair and Blue eyes. </div> 
+<div id="myDiv01"> ... </div> 
 
 
 <hr>
@@ -100,15 +81,23 @@ Nothing: <input type="text" i="myText00" value="Useless at the moment"><br>
                                                        document.getElementById('myDiv02').innerHTML += 'Object3 = ' + animals.animalthree + '<br>' 
                                                        }">
 
-<div id="myDiv02">Objects are: <br>Object1 = panda<br>Object2 = dog<br>Object3 = lion<br></div> 
+<div id="myDiv02"> </div> 
 <br> 
-<hr>
-       
-
-<div id="myDiv04"> ... </div> 
-
-
 <hr> 
 
+<h4> Object 3 </h4> 
 
-</body></html>
+Math with Objects: 
+<br> 
+<input type="number" id="myNum01" value="5">
+<input type="number" id="myNum02" value="4"> 
+<input type="button" value="math" onclick="{
+                                         let objectmath = { numberone: document.getElementById('myNum01').value , numbertwo: document.getElementById('myNum02').value } ; 
+                                         let myAnswer = objectmath.numberone * objectmath.numbertwo 
+                                         document.getElementById('myDiv03').innerHTML = myAnswer
+                                         }">
+<div id="myDiv03"> </div> 
+<br>
+<hr>
+     
+</body>
