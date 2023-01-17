@@ -86,7 +86,7 @@ function calculateTemp() {
 </script> 
 
 <form id="tempCalc" onsubmit="calculateTemp(); return false">
-   <label for="temp">Please enter the temperature you'd like to convert.</label> <br>
+   <label for="temp">Enter the temperature you'd like to convert.</label> <br>
    <input name="temp" id="temp" type="number"> 
    <select name="temp_diff" id="temp_diff">
       <option value="1">°Celsius</option>
@@ -103,20 +103,20 @@ function calculateTemp() {
 
 <script>
 function my3Function() {
-  document.getElementById("dem3o").innerHTML = "Hello World";
+  document.getElementById("dem3o").innerHTML = "Spare me from this coding hell";
 }
 </script>
         
 <hr> 
-When You Press the button the Color Changes
+When You Press the button the Colour Changes
 <br>
-<button id="btn">Button</button>
+<button id="btn">Colours</button>
 <script>
 const btn = document.getElementById('btn');
 
 let index = 0;
 
-const colors = ['salmon', 'green', 'blue', 'purple'];
+const colors = ['pink', 'magenta', 'blue', 'purple'];
 
 btn.addEventListener('click', function onClick() {
   btn.style.backgroundColor = colors[index];
@@ -129,9 +129,9 @@ btn.addEventListener('click', function onClick() {
 <hr>
 <input type="range" id="myRange" value="90">
 
-<p>Click the button to call the function and get the value of the Slider.</p>
+<p>Click the button to get the value of the Slider.</p>
 
-<button onclick="myFunction1()">Try it</button>
+<button onclick="myFunction1()">Click Me</button>
 
 <p id="demo2"></p>
 
@@ -142,9 +142,9 @@ function myFunction1() {
 }
 </script><hr>
     
-    <p id="demo">Press button to decorate</p>
+    <p id="demo">Press button to put line through text</p>
 
-<button type="button" onclick="myFunction()">Decorate text</button>
+<button type="button" onclick="myFunction()">Put Line Through Text</button>
 
 <script>
 function myFunction() {
