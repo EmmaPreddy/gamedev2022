@@ -1,40 +1,114 @@
-Version 0.0.2
+<html><head><style type="text/css"></style><style type="text/css" id="operaUserStyle">
+    video {
+      filter: url('data:image/svg+xml,\
+        <svg xmlns="http://www.w3.org/2000/svg">\
+          <filter id="sharpen">\
+            <feConvolveMatrix order="3" preserveAlpha="true" kernelMatrix="1 -1 1 -1 -1 -1 1 -1 1"/>\
+          </filter>\
+        </svg>#sharpen');
+    }
+  
 
-<h2 align=center>t2a02-objects-by-emma.html</h2>
+    img {
+      filter: url('data:image/svg+xml,\
+        <svg xmlns="http://www.w3.org/2000/svg">\
+          <filter id="sharpen">\
+            <feConvolveMatrix order="3" preserveAlpha="true" kernelMatrix="1 -1 1 -1 -1 -1 1 -1 1"/>\
+          </filter>\
+        </svg>#sharpen');
+    }
+  </style></head><body>Version 0.5.3
 
-<a href="https://www.w3schools.com/js/js_objects.asp">Good reference to Javascript Objects</a><br>
+<h2 align="center"> t2a02-Objects-by-Mona.html </h2> 
+<a href="">Good reference to Javascript Objects</a><br> 
 
 Objects are stored named variables
 
-<h4> Example Objects Code</h4>
-<pre>
-let myPerson = {
-"firstName": "John",
-"lastName": "Doe",
-"age": 50, 
-"eyeColor": "blue"
+<h4> Example Objects code </h4> 
+<pre> 
+let myPerson = 
+{ 
+ "firstName" : "John", 
+ "lastName" : "Doe",
+ "age" : 50,
+ "eyeColor" : "blue" 
 }
 
-</pre>
+</pre> 
 
-<h4> Example Working Objects Code</h4>
+<h4> Example working Objects code</h4> 
 
-Nothing: <input type=text id="myText01" value="Useless at the moment"><br>
+Nothing: <input type="text" i="myText00" value="Useless at the moment"><br>
 
-<input type=button value= "Example Object Set and Show" onClick="{
-                                                                 
-                                                                 let myPerson = {
-                                                                 'firstName' : 'John',
-                                                                 'lastName'  : 'Doe',
-                                                                 'age'       : 50,
-                                                                 'eyeColor'  : 'blue'
-                                                                 }
-                                                                 document.getElementById('myDiv01').innerHTML = '<br>myPerson Object has properties: <br>'
-                                                                 document.getElementById('myDiv01').innerHTML += 'firstName' + myPerson.firstName + '<br>'
-                                                                 document.getElementById('myDiv01').innerHTML += 'lastName' + myPerson.lastName + '<br>
-                                                                 document.getElementById('myDiv01').innerHTML += 'age' + myPerson.age + '<br>
-                                                                 document.getElementById('myDiv01').innerHTML += 'eyeColor' + myPerson.eyeColor + '<br>
-                                                                 }">
 
-<div id="myDiv01">...</div>
+<input type="button" value="Example Object Set and Show" onclick="{ 
+        let myPerson = { 
+        'firstName' : 'John', 
+        'lastName' : 'Doe', 
+        'age' : 50, 
+        'eyeColor' : 'blue' 
+         }
 
+      document.getElementById('myDiv00').innerHTML = '<br>myPerson Object has properties: <br>' 
+      document.getElementById('myDiv00').innerHTML += 'firstName: ' + myPerson.firstName + '<br>'
+      document.getElementById('myDiv00').innerHTML += 'lastName: ' + myPerson.lastName + '<br> ' 
+      document.getElementById('myDiv00').innerHTML += 'age: ' + myPerson.age + '<br>'
+      document.getElementById('myDiv00').innerHTML += 'eyeColor: ' + myPerson.eyeColor + '<br>'  
+     }">
+
+<div id="myDiv00"><br>myPerson Object has properties: <br>firstName: John<br>lastName: Doe<br> age: 50<br>eyeColor: blue<br></div> 
+<br> 
+
+<hr> 
+
+<h4> design your Person </h4> 
+<input type="text" id="myText01" value="first name"> <br> 
+<input type="text" id="myText02" value="last name"> <br> 
+<input type="text" id="myText03" value="age"> <br>
+<input type="text" id="myText04" value="haircolor"> <br>
+<input type="text" id="myText05" value="eyecolor"> <br>
+<input type="button" value="create Person" onclick="{ 
+       
+        let thePerson = { 
+        'firstname' : document.getElementById('myText01').value,
+        'lastname' : document.getElementById('myText02').value,
+        'Age' : document.getElementById('myText03').value,
+        'haircolor' :  document.getElementById('myText04').value,
+        'eyecolor' : document.getElementById('myText05').value
+         }
+                                                  
+        document.getElementById('myDiv01').innerHTML = thePerson.firstname + ' ' + thePerson.lastname + ' is ' + thePerson.Age + ' years old. She/he has ' + thePerson.haircolor + ' hair and ' + thePerson.eyecolor + ' eyes. ' 
+        }">
+
+<div id="myDiv01">Wren Preddy is 16 years old. She/he has Black hair and Blue eyes. </div> 
+
+
+<hr>
+
+<h4> Object 2 </h4> 
+
+<input type="button" value="show animal object" onclick="{ 
+                                                       let animals = { 
+                                                       'animalone' : 'panda' ,
+                                                       'animaltwo' : 'dog' , 
+                                                       'animalthree' : 'lion' 
+                                                       } 
+                                                       
+                                                       document.getElementById('myDiv02').innerHTML = 'Objects are: <br>' 
+                                                       document.getElementById('myDiv02').innerHTML += 'Object1 = ' + animals.animalone + '<br>' 
+                                                       document.getElementById('myDiv02').innerHTML += 'Object2 = ' + animals.animaltwo + '<br>' 
+                                                       document.getElementById('myDiv02').innerHTML += 'Object3 = ' + animals.animalthree + '<br>' 
+                                                       }">
+
+<div id="myDiv02">Objects are: <br>Object1 = panda<br>Object2 = dog<br>Object3 = lion<br></div> 
+<br> 
+<hr>
+       
+
+<div id="myDiv04"> ... </div> 
+
+
+<hr> 
+
+
+</body></html>
